@@ -53,5 +53,5 @@ variable "enable_single_nat_gateway" {
 variable "enable_monitoring" {
   description = "Enable monitoring stack (Prometheus, Grafana)"
   type        = bool
-  default     = false
+  default     = true
 }
