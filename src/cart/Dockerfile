@@ -21,8 +21,7 @@ COPY .mvn .mvn
 COPY mvnw .
 COPY pom.xml .
 
-RUN sed -i 's/\r$//' mvnw  
-RUN chmod +x ./mvnw
+RUN sed -i 's/\r$//' ./mvnw && chmod +x ./mvnw && ./mvnw dependency:go-offline -B -q
 
 RUN ./mvnw dependency:go-offline -B -q
 
