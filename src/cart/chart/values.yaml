@@ -4,9 +4,9 @@
 
 replicaCount: 1
 image:
-  repository: public.ecr.aws/aws-containers/retail-store-sample-cart
+  repository: 434439813426.dkr.ecr.us-west-2.amazonaws.com/retail-store-cart
   pullPolicy: Always
-  tag: "1.2.2"
+  tag: "cde16fa"
 imagePullSecrets:
   - name: regcred
 nameOverride: ""
