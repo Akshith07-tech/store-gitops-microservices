@@ -4,6 +4,10 @@
  
 <div align="center">
   <div align="center"
+  
+[![Stars](https://img.shields.io/github/stars/LondheShubham153/retail-store-sample-app)](Stars)
+![GitHub License](https://img.shields.io/github/license/LondheShubham153/retail-store-sample-app?color=green)
+![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%LondheShubham153%2Fretail-store-sample-app%2Frefs%2Fheads%2Fmain%2F.release-please-manifest.json&query=%24%5B%22.%22%5D&label=release)
 
   </div>
 
@@ -293,6 +297,9 @@ Use the EXTERNAL-IP of the ingress-nginx-controller service to access the applic
 ```
 kubectl get pods -n argocd
 ```
+Running pods:
+
+![running pods](./docs/images/running.png)
 
 ### Step 9: Port-forward to Argo CD UI and login:
 
@@ -351,8 +358,8 @@ To delete all resources created by Terraform:
 terraform destroy --auto-approve
 ```
 
-<img width="1139" height="439" alt="image" src="destroy.png" />
-<img width="1139" height="439" alt="image" src="destroy-1.png" />
+![destroy](./docs/images/destroy.png)
+![destroy](./docs/images/destroy-1.png)
 
 
 > [!NOTE]
