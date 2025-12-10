@@ -1,13 +1,6 @@
 # Retail Store Sample App - GitOps with Amazon EKS Auto Mode
  
 ![Banner](./docs/images/banner.png)
- 
-<div align="center">
-  <div align="center"
-  
-[![Stars](https://img.shields.io/github/stars/LondheShubham153/retail-store-sample-app)](Stars)
-![GitHub License](https://img.shields.io/github/license/LondheShubham153/retail-store-sample-app?color=green)
-![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%LondheShubham153%2Fretail-store-sample-app%2Frefs%2Fheads%2Fmain%2F.release-please-manifest.json&query=%24%5B%22.%22%5D&label=release)
 
   </div>
 
@@ -81,7 +74,7 @@ The Infrastructure Architecture follows cloud-native best practices:
 
 1. **Install Prerequisites**: AWS CLI, Terraform, kubectl, Docker, Helm
 2. **Configure AWS**: `aws configure` with appropriate credentials
-3. **Clone Repository**: `git clone https://github.com/LondheShubham153/retail-store-sample-app.git`
+3. **Clone Repository**: `git clone https://github.com/Akshith07-tech/store-gitops-microservices.git`
 4. **Deploy Infrastructure**: Run Terraform in two phases (see [Getting Started](#getting-started))
 5. **Access Application**: Get load balancer URL and browse the retail store
 
@@ -113,7 +106,7 @@ This repository uses a **dual-branch approach** for different deployment scenari
 
 1. **Install Prerequisites**: AWS CLI, Terraform, kubectl, Docker, Helm
 2. **Configure AWS**: `aws configure` with appropriate credentials
-3. **Clone Repository**: `git clone https://github.com/LondheShubham153/retail-store-sample-app.git`
+3. **Clone Repository**: `git clone https://github.com/Akshith07-tech/store-gitops-microservices.git`
 4. **Deploy Infrastructure**: Run Terraform in two phases (see [Getting Started](#getting-started))
 5. **Access Application**: Get load balancer URL and browse the retail store
 
@@ -207,7 +200,7 @@ git clone https://github.com/Akshith07-tech/store-gitops-microservices.git
 ### Step 4. Deploy Infrastructure with Terraform:
 
 ```sh
-cd retail-store-sample-app/terraform/
+cd store-gitops-microservices/terraform/
 terraform init
 terraform apply --auto-approve
 ```
@@ -264,10 +257,6 @@ For GitHub Actions, first configure secrets so the pipelines can be automaticall
 > Once the entire cluster is created, any changes pushed to the repository will automatically trigger GitHub Actions.
 
 GitHub Actions will automatically build and push the updated Docker images to Amazon ECR.
-
-
-
-<img width="2868" height="1130" alt="image" src="https://github.com/user-attachments/assets/f29c3416-d630-4463-81d2-aaa8af9a02da" />
 
 
 ### Verify Deployment
@@ -332,33 +321,46 @@ The ArgoCD UI provides:
 - **Sync Operations**: Manual sync and rollback capabilities
 - **Health Monitoring**: Application and resource health status
 
-gitops branch argocd:
+### step 11: src changes 
+
+After changing in gitops branch
+
+![UI Dashboard](./docs/images/changes.png)
+
+#### gitops branch argocd:
+
+Automatically the argocd is triggered 
 
 ![ArgoCD UI Dashboard](./docs/images/gitops-cd.png)
 
-### Step 11: Monitor Application Deployment
+### Step 12: Monitor Application Deployment
 
 ```bash
 kubectl get pods -n retail-store
 kubectl get ingress -n retail-store
 ```
-### Step 12: Observability
+### Step 13: Observability
 
 prometheus:
+
 ![prometheus UI Dashboard](./docs/images/prometheus.png)
 
 grafana:
+
 ![grafana UI Dashboard](./docs/images/grafana-1.png)
+
 ![grafana UI Dashboard](./docs/images/grafana-2.png)
+
 ![grafana UI Dashboard](./docs/images/grafana-3.png)
 
-### Step 13: Cleanup
+### Step 14: Cleanup
 To delete all resources created by Terraform:
 ```
 terraform destroy --auto-approve
 ```
 
 ![destroy](./docs/images/destroy.png)
+
 ![destroy](./docs/images/destroy-1.png)
 
 
