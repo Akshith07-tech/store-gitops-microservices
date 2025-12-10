@@ -321,33 +321,46 @@ The ArgoCD UI provides:
 - **Sync Operations**: Manual sync and rollback capabilities
 - **Health Monitoring**: Application and resource health status
 
-gitops branch argocd:
+### step 11: src changes 
+
+After changing in gitops branch
+
+![UI Dashboard](./docs/images/changes.png)
+
+#### gitops branch argocd:
+
+Automatically the argocd is triggered 
 
 ![ArgoCD UI Dashboard](./docs/images/gitops-cd.png)
 
-### Step 11: Monitor Application Deployment
+### Step 12: Monitor Application Deployment
 
 ```bash
 kubectl get pods -n retail-store
 kubectl get ingress -n retail-store
 ```
-### Step 12: Observability
+### Step 13: Observability
 
 prometheus:
+
 ![prometheus UI Dashboard](./docs/images/prometheus.png)
 
 grafana:
+
 ![grafana UI Dashboard](./docs/images/grafana-1.png)
+
 ![grafana UI Dashboard](./docs/images/grafana-2.png)
+
 ![grafana UI Dashboard](./docs/images/grafana-3.png)
 
-### Step 13: Cleanup
+### Step 14: Cleanup
 To delete all resources created by Terraform:
 ```
 terraform destroy --auto-approve
 ```
 
 ![destroy](./docs/images/destroy.png)
+
 ![destroy](./docs/images/destroy-1.png)
 
 
